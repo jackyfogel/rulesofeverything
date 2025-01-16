@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-qvk4%^(dycws75h*$r*kh1v6x0yw9zh0jgjb8abo_*g=6&z-so
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rulesofeverything.com']
+ALLOWED_HOSTS = ['rulesofeverything.com', 'localhost']
 
 
 # Application definition
@@ -49,13 +49,13 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
+ 
 ROOT_URLCONF = "rulesofeverything.urls"
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        'DIRS': [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

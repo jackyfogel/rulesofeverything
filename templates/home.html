@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+Available Games kkk
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Available Games</h1>
+    <div class="row">
+        {% for game in games %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h5 class="card-title">{{ game.name }}</h5>
+                    <p class="card-text">
+                        <strong>Description:</strong> {{ game.description }}
+                    </p>
+                    <p class="card-text">
+                        <strong>Rules:</strong> {{ game.rules }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
